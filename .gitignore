@@ -1,7 +1,7 @@
 # Rust
-target
+target/
 
 # RustRover/Idea specific
-.idea/**
-.bsp/**
+.idea/
+.bsp/
 
