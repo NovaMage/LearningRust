@@ -1,5 +1,6 @@
 use std::cmp::Ordering;
 use std::io;
+use std::io::{Read, Write};
 use rand::Rng;
 
 fn main() {
@@ -28,6 +29,9 @@ fn main() {
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
                 println!("You win!");
+                print!("Press any key to exit...");
+                io::stdout().flush().unwrap();
+                let _ = io::stdin().read(&mut [0u8]).unwrap();
                 break;
             }
         }
