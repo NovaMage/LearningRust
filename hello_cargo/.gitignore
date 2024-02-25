@@ -1,1 +1,7 @@
+# Rust
 target
+
+# RustRover/Idea specific
+.idea/**
+.bsp/**
+
