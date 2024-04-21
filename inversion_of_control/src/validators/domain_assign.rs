@@ -7,6 +7,7 @@ pub struct Info {
 
 pub fn validate(command: &DomainAssignCommand, info: &Info) -> Result<(), String> {
     println!("Validating command {:#?}", command);
+
     if command.domain_id == 0 {
         return Err("Domain ID is required".to_string());
     }
