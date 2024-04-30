@@ -10,10 +10,6 @@ impl Model {
     }
 }
 
-trait SomeTrait {
-    fn some_fun(&self) -> i64;
-}
-
 fn do_benchmark(quantity: usize) {
     let mut start_time = std::time::SystemTime::now();
     let mut buffer = Vec::with_capacity(quantity);
@@ -29,11 +25,6 @@ fn do_benchmark(quantity: usize) {
     }
     println!("Time to duplicate contents of all: {:?}", start_time.elapsed().unwrap());
 }
-
-fn something() -> Box<dyn SomeTrait> {
-    todo!()
-}
-
 
 fn main() {
     println!("Please input quantity of objects to create:");
